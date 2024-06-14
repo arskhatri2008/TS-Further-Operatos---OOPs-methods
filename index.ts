@@ -139,3 +139,19 @@ let p1 = new Person()
 console.log("Get Function: ", p1.name)
 p1.name = "Musab Ahmed"
 console.log("Set Function: ", p1.name)
+
+// Signature Or Function overloaded --> but its function name are same so it will work.
+
+function abc(a:number, b:number):void
+function abc(a:string, b:string):void
+function abc(a:boolean, b:boolean):void
+
+function abc(a:any, b:any):any{} // returns nothing
+
+// function abc(a:any, b:any):any{
+//     return a + b
+// }
+
+abc(2,4)
+abc("a","b")
+abc(true, false)
