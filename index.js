@@ -66,13 +66,36 @@ Object.defineProperty(exports, "__esModule", { value: true });
 // }
 // let h1 = new Human()
 // console.log(h1.name)
-// Abstract
+// Abstract - abstract restrict and do not allow to create an object but abstract class can extend into another class.
+// abstract class Person {
+//     name: string = "Arsalan Ahmed"
+//     age: number = 25
+// }
+// class Human extends Person{
+//     email:string = "abc@xyz.com"
+// }
+// let p1 = new Human()
+// console.log(p1)
+// Get of Gater Function - gater function can not be call its already callable (p1.name) and its always return a value.
+// class Person {
+//     private _name: string = "Arsalan Ahmed"
+//     get name(){
+//         return this._name
+//     }
+// }
+// let p1 = new Person()
+// console.log(p1.name)
+// Set Function - setter function must require 1 parameter and its not return back any value, how to call set function (p1.name = "Arsalan Ahmed").
 class Person {
-    name = "Arsalan Ahmed";
-    age = 25;
+    _name = "Arsalan Ahmed";
+    get name() {
+        return this._name;
+    }
+    set name(vlaue) {
+        this._name = vlaue;
+    }
 }
-class Human extends Person {
-    email = "abc@xyz.com";
-}
-let p1 = new Human();
-console.log(p1);
+let p1 = new Person();
+console.log("Get Function: ", p1.name);
+p1.name = "Musab Ahmed";
+console.log("Set Function: ", p1.name);
