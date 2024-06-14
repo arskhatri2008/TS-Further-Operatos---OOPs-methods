@@ -1,19 +1,6 @@
+"use strict";
 // let user: string = "Arsalan Ahmed"
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (Object.prototype.hasOwnProperty.call(b, p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    };
-    return function (d, b) {
-        if (typeof b !== "function" && b !== null)
-            throw new TypeError("Class extends value " + String(b) + " is not a constructor or null");
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
+Object.defineProperty(exports, "__esModule", { value: true });
 // Ternary Operator - ternary operators perform If & Else condition.
 // user == "Arsalan Ahmed"? console.log("Hello Arsalan Ahmed") : console.log("Invalid User")
 // && ==> Short Circuit - If condition is true code will execute after &&.
@@ -70,21 +57,22 @@ var __extends = (this && this.__extends) || (function () {
 // let h1 = new Human()
 // console.log(h1.getName())
 // Polymorphism or Overwrite
-var Person = /** @class */ (function () {
-    function Person() {
-        this.name = "Arsalan Ahmed";
-        this.age = 25;
-    }
-    return Person;
-}());
-var Human = /** @class */ (function (_super) {
-    __extends(Human, _super);
-    function Human() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this.name = "Musab Ahmed";
-        return _this;
-    }
-    return Human;
-}(Person));
-var h1 = new Human();
-console.log(h1.name);
+// class Person {
+//     name: string = "Arsalan Ahmed"
+//     age = 25
+// }
+// class Human extends Person{
+//     name: string = "Musab Ahmed"
+// }
+// let h1 = new Human()
+// console.log(h1.name)
+// Abstract
+class Person {
+    name = "Arsalan Ahmed";
+    age = 25;
+}
+class Human extends Person {
+    email = "abc@xyz.com";
+}
+let p1 = new Human();
+console.log(p1);

@@ -84,14 +84,28 @@
 
 // Polymorphism or Overwrite
 
-class Person {
+// class Person {
+//     name: string = "Arsalan Ahmed"
+//     age = 25
+// }
+
+// class Human extends Person{
+//     name: string = "Musab Ahmed"
+// }
+
+// let h1 = new Human()
+// console.log(h1.name)
+
+// Abstract - abstract restrict and do not allow to create an object but abstract class can extend into another class.
+
+abstract class Person {
     name: string = "Arsalan Ahmed"
-    age = 25
+    age: number = 25
 }
 
 class Human extends Person{
-    name: string = "Musab Ahmed"
+    email:string = "abc@xyz.com"
 }
 
-let h1 = new Human()
-console.log(h1.name)
+let p1 = new Human()
+console.log(p1)
